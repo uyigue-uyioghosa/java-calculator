@@ -8,25 +8,25 @@
 </head>
 <body>
     <script >
-    var oper=prompt("what operation do u wahat to perform, 1 for add, 2 for sub, 3 for div, and 4 for multiplication");
-var num1=prompt("enter num1 ");
-var num2=prompt("enter num2 ");
-if (oper==1)
-
-{console.log(num1 + num2)
-}
-else if (oper == 2)
-
-{
-    console.log=(num1 - num2)
-
-}else if ( oper == 3)
-{
-    console.log=( num1 / num2)
-
-}else (oper == 4)
-console.log(num1 * num2)
- 
+        const num1=parseInt(prompt("enter first num: "));
+const num2=parseInt(prompt("enter second num: "));
+const operator = prompt("Enter operation (+, -, *, /)");
+let result = 0;
+if (isNaN(num1)|| isNaN(num2)){
+    alert("invalid input, refresh the page and start again")
+}else{
+    if(operator == "+"){
+        result = num1 + num2;
+    }else if (operator == "-"){
+        result = num1 - num2;
+    }else if (operator == "*"){
+        result = num1 * num2;
+    }else if (operator == "/"){
+    result = num1 / num2;
+    }
+}  
+document.write(num1 + operator + num2 + "=" + result )  
     </script>
+
 </body>
 </html>
